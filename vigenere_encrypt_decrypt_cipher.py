@@ -1,7 +1,7 @@
-""" # Encrypts and decrypts a message using using an alpha, numeric or alphanumeric key """
+""" Encrypts and decrypts a message using using an alpha, numeric or alphanumeric key """
 
 
-""" # Encrypts a string message (m) using an alpha, numeric or alphanumeric key (k) """
+""" Encrypts a string message (m) using an alpha, numeric or alphanumeric key (k) """
 
 
 def vigenere_encrypt(m, k):
@@ -15,7 +15,7 @@ def vigenere_encrypt(m, k):
     return encrypt
 
 
-""" # Decrypts a string message (msg) using an alpha, numeric or alphanumeric key (k) """
+""" Decrypts a string message (msg) using an alpha, numeric or alphanumeric key (k) """
 
 
 def vigenere_decrypt(msg, k):
@@ -29,8 +29,8 @@ def vigenere_decrypt(msg, k):
         if ord(char_msg) > ord(char_k) or ord(char_msg) == ord(char_k):
             decrypt += chr(ord(char_msg) - ord(char_k) + ord('a'))
         else: decrypt += chr(ord(char_msg) - ord(char_k) + ord('z')+1)
-    return ''.join([i for i in decrypt if i.isalpha()]) #joins all characters that are alphabets and ignores the rest
+    return ''.join([i for i in decrypt if i.isalpha()])
 
 
-""" # Example with message and key from Wikipedia with the exception of the letter 'e' being replaced by '4' """
+""" Example with message and key from Wikipedia with the exception of the letter 'e' being replaced by '4' """
 print vigenere_decrypt("lxfopvefrnhr", "l4monlemonl4")
