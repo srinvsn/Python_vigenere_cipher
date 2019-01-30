@@ -28,7 +28,7 @@ def vigenere_decrypt(msg, k):
             decrypt += chr((ord(char_msg) - int(char_k)))
         if ord(char_msg) > ord(char_k) or ord(char_msg) == ord(char_k):
             decrypt += chr(ord(char_msg) - ord(char_k) + ord('a'))
-        else: decrypt += chr(ord(char_msg) - ord(char_k) + ord('z')+1)
+        else: decrypt += chr(ord(char_msg) - ord(char_k) + ord('z') + 1)
     return ''.join([i for i in decrypt if i.isalpha()])
 
 
